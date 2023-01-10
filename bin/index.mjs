@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const removeWasm = (str) => {
-  return str.replace(/wasm:\/\/wasm\/[0-9a-f]+:[a-zA-Z0-9]+:/g, '');
+  return str.replace(/wasm:\/\/wasm\/[0-9a-f]+:[a-zA-Z0-9\-\[\]]+:/g, '');
 }
 function extractLastNumber(str) {
   const regex = /\d+(?=\))/;
